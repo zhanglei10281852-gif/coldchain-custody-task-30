@@ -1,0 +1,9 @@
+{
+  "study_code": "STUDY-COLD-001",
+  "origin_site_code": "SITE-SH-01",
+  "destination_site_code": "SITE-BJ-01",
+  "container_serial": "BOX-0001",
+  "specimen_type": "plasma",
+  "temperature_minimum_celsius": 2,
+  "temperature_maximum_celsius": 8
+}
