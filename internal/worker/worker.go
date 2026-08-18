@@ -36,12 +36,7 @@ func (w *Worker) Run(ctx context.Context) error {
 	for {
 		select {
 		case <-ctx.Done():
-			reason := ctx.Err()
-			if reason == nil {
-				reason = context.Canceled
-			}
-			w.logger.Info("worker stopped", "reason", reason)
-			return nil
+			return ctx.Err()
 		case <-ticker.C:
 			if err := w.RunOnce(ctx); err != nil {
 				w.logger.Error("worker pass failed", "error", err)
